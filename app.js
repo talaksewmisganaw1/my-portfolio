@@ -2,7 +2,10 @@ const sections = document.querySelectorAll('.section');
 const btnsContainer = document.querySelector(".controls");
 const sectionBtns = document.querySelectorAll('.control');
 const body = document.querySelector('.main-content');
-
+const showCertificationBtn = document.querySelector('.show-btn');
+const certificationContainer = document.querySelector('.certifications')
+const certificates = document.querySelector('.certificates');
+const showIcon = document.querySelector('.show-icon');
 
 sectionBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -27,4 +30,19 @@ const themeBtn = document.querySelector(".theme-btn");
 themeBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle('light-mode');
+})
+
+// toggle the certificates link & description
+
+showCertificationBtn.addEventListener("click", () => {
+    certificates.classList.toggle("shown");
+    if(!certificates.classList.contains("shown")) {
+        showCertificationBtn.parentElement.classList.remove('extend');
+        // showCertificationBtn.innerHTML=`<i class="fa-solid fa-caret-down">`
+        showCertificationBtn.classList.remove("rotated");    
+    } else {
+        showCertificationBtn.parentElement.classList.add('extend');
+        // showCertificationBtn.innerHTML=`<i class="fa-solid fa-caret-up">`
+        showCertificationBtn.classList.add("rotated");
+    }
 })
