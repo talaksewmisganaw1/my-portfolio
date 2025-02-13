@@ -6,6 +6,7 @@ const showCertificationBtn = document.querySelector('.show-btn');
 const certificationContainer = document.querySelector('.certifications')
 const certificates = document.querySelector('.certificates');
 const showIcon = document.querySelector('.show-icon');
+const expandBtns = document.querySelectorAll('.expander');
 
 sectionBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -46,3 +47,10 @@ showCertificationBtn.addEventListener("click", () => {
         showCertificationBtn.classList.add("rotated");
     }
 })
+
+//expanding blog
+expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
+    const blog = e.currentTarget.parentElement.parentElement;
+    blog.classList.add("expanded");
+    console.log(blog);
+})))
