@@ -98,15 +98,6 @@ section {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
-}
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transform: translateY(0%) scaleY(1);
-  }
 }
 
 .controls {
@@ -664,16 +655,16 @@ section {
   height: 50%;
 }
 .blog-container .blog .expand-container {
-  background-image: linear-gradient(to bottom, rgba(42, 46, 53, 0) 10%, rgb(42, 46, 53) 45%);
+  display: none;
+  background-image: linear-gradient(to bottom, rgba(42, 46, 53, 0) 15%, rgb(42, 46, 53) 45%);
   position: absolute;
-  border: 1px solid red;
   bottom: 0;
   right: 0;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 0.2rem;
-  padding: 1rem 0.8rem 0.1rem;
+  padding: 2.5rem 0.8rem 0.1rem;
   color: var(--color-secondary);
 }
 .blog-container .blog .expand-container .dots {
@@ -684,22 +675,68 @@ section {
 }
 
 .expanded-blog-container {
+  display: none;
   position: fixed;
-  width: 90vw;
-  margin: auto;
-  right: 10px;
-  left: 10px;
-  z-index: 9;
-  min-height: 30px;
-  background-color: rgb(216, 28, 28);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  z-index: 21;
+  background-color: rgba(223, 223, 223, 0.164);
+  justify-content: center;
 }
-.expanded-blog-container .expanded-blog {
-  width: 80%;
+.expanded-blog-container .blog {
+  margin: 12rem;
+  width: 55%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 1rem;
+  box-shadow: 0 0 11rem 4rem var(--color-grey-3);
+  transition: all 0.8s ease-in-out;
 }
-.expanded-blog-container .expanded-blog i {
+.expanded-blog-container .blog:hover {
+  box-shadow: 0 0 10rem 4rem rgba(21, 141, 111, 0.822);
+}
+.expanded-blog-container .blog:hover .blog-cover {
+  filter: none;
+  transform: none;
+}
+.expanded-blog-container .blog .blog-cover {
+  width: 100%;
+  height: auto;
+}
+.expanded-blog-container .blog .blog-text {
+  padding: 1.1rem 3rem;
+  height: none;
+}
+.expanded-blog-container .blog .blog-text h4 {
+  text-align: center;
+}
+.expanded-blog-container .blog .expand-container {
+  display: none;
+}
+.expanded-blog-container .blog i {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grey-5);
+  border-radius: 2rem;
+  border: 2px dotted var(--color-grey-3);
+  padding: 0.2rem;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1.5rem;
+  right: 1.5rem;
+  transition: all 0.2s ease-out;
+}
+.expanded-blog-container .blog i:hover {
+  transform: scale(1.1);
+}
+
+.visible-expanded-blog {
+  display: flex;
 }
 
 .contact-content-con {

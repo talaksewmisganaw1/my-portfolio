@@ -7,6 +7,8 @@ const certificationContainer = document.querySelector('.certifications')
 const certificates = document.querySelector('.certificates');
 const showIcon = document.querySelector('.show-icon');
 const expandBtns = document.querySelectorAll('.expander');
+const expandedBlogContainer = document.querySelector(".expanded-blog-container");
+const blogsSection = document.getElementById("blogs");
 
 sectionBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -52,5 +54,21 @@ showCertificationBtn.addEventListener("click", () => {
 expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
     const blog = e.currentTarget.parentElement.parentElement;
     blog.classList.add("expanded");
-    console.log(blog);
+
+    const selectedBlog = blog.cloneNode(true);
+    selectedBlog.insertAdjacentHTML('beforeend','<i class="close-btn fa-solid fa-x"></i>');
+
+    console.log(selectedBlog)
+    expandedBlogContainer.appendChild(selectedBlog);
+    expandedBlogContainer.classList.add("visible-expanded-blog");
+    
+    const closeBtn = document.querySelector(".close-btn");
+    closeBtn.addEventListener("click", () => {
+        expandedBlogContainer.classList.remove("visible-expanded-blog");
+        expandedBlogContainer.innerHTML="";
+    })
+    
+    // blogsSection.style.height="100vh";
+    // blogsSection.style.overflow="hidden";
+
 })))
