@@ -710,7 +710,7 @@ section {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 100%;
+    height: fit-content;
     z-index: 21;
     background-color: rgba(223, 223, 223, 0.164);
     justify-content: center;
@@ -739,6 +739,21 @@ section {
             h4 {
                 text-align: center;
             }
+            h5 {
+                color: #dedfe1;
+                font-size: 1.1rem;
+            }
+            h6 {
+                font-size: 1rem;
+                color: #d9d9da;
+            }
+            ul, ol {
+                color: var(--color-grey-2)
+            }
+            // p {
+            //     display: block;
+            //     margin: 1rem;
+            // }
         }
         .expand-container {
             display: none;
@@ -756,7 +771,7 @@ section {
             position: absolute;
             top: 1.5rem;
             right: 1.5rem;
-            transition: all .2s ease-out;
+            transition: all .4s ease-out;
             &:hover {
                 transform: scale(1.1);
             }

@@ -55,12 +55,15 @@ expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
     const blog = e.currentTarget.parentElement.parentElement;
     blog.classList.add("expanded");
 
+    console.log(blog)
+
     const selectedBlog = blog.cloneNode(true);
     selectedBlog.insertAdjacentHTML('beforeend','<i class="close-btn fa-solid fa-x"></i>');
 
     console.log(selectedBlog)
     expandedBlogContainer.appendChild(selectedBlog);
     expandedBlogContainer.classList.add("visible-expanded-blog");
+    window.scrollTo(0, 0);
     
     const closeBtn = document.querySelector(".close-btn");
     closeBtn.addEventListener("click", () => {
