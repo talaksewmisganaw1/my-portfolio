@@ -119,9 +119,10 @@ section {
   color: var(--color-white) !important;
 }
 .controls .control {
+  background-color: var(--color-grey-4);
+  box-shadow: var(--box-shadow-1);
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--color-grey-4);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -129,7 +130,6 @@ section {
   align-items: center;
   justify-content: center;
   margin: 0.7rem 0;
-  box-shadow: var(--box-shadow-1);
 }
 .controls .control i {
   font-size: 1.2rem;
@@ -650,9 +650,11 @@ section {
   line-height: 2rem;
   padding-bottom: 1rem;
 }
+.blog-container .blog .blog-text li span {
+  font-weight: bold;
+}
 .blog-container .blog .blog-text .blog-component {
-  width: 50%;
-  height: 50%;
+  width: 100%;
 }
 .blog-container .blog .expand-container {
   display: none;
@@ -724,6 +726,13 @@ section {
 }
 .expanded-blog-container .blog .blog-text ul, .expanded-blog-container .blog .blog-text ol {
   color: var(--color-grey-2);
+  margin: 0 2rem 1rem;
+}
+.expanded-blog-container .blog .blog-text ul p, .expanded-blog-container .blog .blog-text ol p {
+  margin: 0.5rem 0 0 -1.5rem;
+}
+.expanded-blog-container .blog .blog-text ul li, .expanded-blog-container .blog .blog-text ol li {
+  margin-top: 0.25rem;
 }
 .expanded-blog-container .blog .expand-container {
   display: none;
@@ -758,15 +767,6 @@ section {
 .contact-content-con .left-contact {
   flex: 2;
 }
-.contact-content-con .left-contact h4 {
-  margin-top: 1rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.contact-content-con .left-contact p {
-  margin: 1rem 0;
-  line-height: 2rem;
-}
 .contact-content-con .left-contact .contact-info .contact-item {
   display: flex;
   align-items: center;
@@ -784,6 +784,15 @@ section {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+}
+.contact-content-con .left-contact h4 {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.contact-content-con .left-contact p {
+  margin: 1rem 0;
+  line-height: 2rem;
 }
 .contact-content-con .left-contact .contact-icon {
   display: flex;
