@@ -717,7 +717,7 @@ section {
   text-align: center;
 }
 .expanded-blog-container .blog .blog-text h5 {
-  color: #dedfe1;
+  color: rgba(222, 223, 225, 0.8274509804);
   font-size: 1.1rem;
 }
 .expanded-blog-container .blog .blog-text h6 {
@@ -733,6 +733,27 @@ section {
 }
 .expanded-blog-container .blog .blog-text ul li, .expanded-blog-container .blog .blog-text ol li {
   margin-top: 0.25rem;
+}
+.expanded-blog-container .blog .blog-text ul li .code, .expanded-blog-container .blog .blog-text ol li .code {
+  background-color: rgba(178, 190, 205, 0.1960784314);
+  margin: 0.5rem auto;
+  padding: 1rem;
+  width: 107%;
+  font-family: "Courier New", Courier, monospace;
+}
+.expanded-blog-container .blog .blog-text .step {
+  border-top: 0.4rem solid rgba(69, 78, 86, 0.5607843137);
+  padding-top: 1rem;
+}
+.expanded-blog-container .blog .blog-text .step .bulleted, .expanded-blog-container .blog .blog-text .step .bulleted2 {
+  list-style-type: disc;
+}
+.expanded-blog-container .blog .blog-text .step .bulleted2 {
+  margin-left: 1rem;
+}
+.expanded-blog-container .blog .blog-text .step .indented {
+  margin-left: 1rem;
+  padding-bottom: 0;
 }
 .expanded-blog-container .blog .expand-container {
   display: none;

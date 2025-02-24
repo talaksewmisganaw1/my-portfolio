@@ -748,7 +748,7 @@ section {
                 text-align: center;
             }
             h5 {
-                color: #dedfe1;
+                color: #dedfe1d3;
                 font-size: 1.1rem;
             }
             h6 {
@@ -763,12 +763,33 @@ section {
                 }
                 li {
                     margin-top: .25rem;
+                    .code {
+                        background-color: #b2becd32;
+                        margin: .5rem auto;
+                        padding: 1rem;
+                        width: 107%;
+                        font-family: 'Courier New', Courier, monospace;
+                    }
                 }
             }
             // p {
             //     display: block;
             //     margin: 1rem;
             // }
+            .step {
+                border-top: .4rem solid #454e568f;
+                padding-top: 1rem;
+                .bulleted, .bulleted2 {
+                    list-style-type: disc;
+                }
+                .bulleted2 {
+                    margin-left: 1rem;
+                }
+                .indented {
+                    margin-left: 1rem;
+                    padding-bottom: 0;
+                }
+            }
         }
         .expand-container {
             display: none;

@@ -479,125 +479,103 @@
                                 <p>
                                     GitHub Pages is an excellent tool for hosting your personal website for free. Whether you’re creating a portfolio, a blog, or a project showcase, deploying via GitHub Pages makes it easy to get your website live quickly. This guide will walk you through the steps of deploying your website to GitHub Pages and connecting it to a custom domain name.
                                 </p>
-                                <div class="step1">
+                                <div class="step">
                                     <h5>
                                         Step 1: Set Up Your GitHub Repository
                                     </h5>
                                     <p>
                                         Before you can deploy, you need to create a GitHub repository to store your website files.
                                     </p>
-                                    <h6>
-                                        1. Create a New Repository:
-                                    </h6>
-                                    <p>
-                                        Log in to GitHub and click on the + icon in the top-right corner of your screen. Select New repository.
-                                    </p>
-                                    <h6>
-                                        2. Name Your Repository:
-                                    </h6>
-                                    <p>
-                                        Choose a name for your repository (e.g., portfolio-website).
-                                    </p>
-                                    <h6>
-                                        3. Initialize with a README:
-                                    </h6>
-                                    <p>
-                                        Optionally, initialize your repository with a README file to describe your project.
-                                    </p>
-                                    <h6>
-                                        4. Create the Repository:
-                                    </h6>
-                                    <p>
-                                        Click the Create repository button.
-                                    </p>
+                                    <ol>
+                                        <li>
+                                            <span class="lighter-li">1. Create a New Repository: </span> log in to GitHub and click on the + icon in the top-right corner of your screen. Select New repository.
+                                        </li>
+                                        <li>
+                                            <span class="lighter-li">2. Name Your Repository: </span> choose a name for your repository (e.g., portfolio-website).
+                                        </li>
+                                        <li>
+                                            <span class="lighter-li">3. Initialize with a README: </span> optionally, initialize your repository with a README file to describe your project.
+                                        </li>
+                                        <li>
+                                            <span class="lighter-li">4. Create the Repository: </span> click the Create repository button.
+                                        </li>
+                                    </ol>
                                 </div>
-                                <div class="step2">
-
+                                <div class="step">
                                     <h5>
                                         Step 2: Add Your Website Files
                                     </h5>
                                     <p>
                                         Once the repository is created, it’s time to upload your website files.
                                     </p>
-                                    <h6>
-                                        1. Create Your Website Locally:
-                                    </h6>
-                                    <p>
-                                        On your local machine, create the files for your website (e.g., index.html, style.css, and any JavaScript files you need).
-                                    </p>
-                                    <h6>
-                                        2. Commit and Push Files to GitHub:
-                                    </h6>
-                                    <p>
-                                        In your terminal or command prompt, navigate to your project folder and run these commands:
-                                    </p>
-                                    <code>
-                                        git init
-                                        git add .
-                                        git commit -m "Initial commit"
-                                        git remote add origin https://github.com/yourusername/portfolio-website.git
-                                        git push -u origin master
-                                    </code>
+                                    <ol>
+                                        <li>
+                                            <span>1. Create Your Website Locally: </span> on your local machine, create the files for your website (e.g., index.html, style.css, and any JavaScript files you need).
+                                        </li>
+                                        <li>
+                                            <span>2. Commit and Push Files to GitHub: </span> in your terminal or command prompt, navigate to your project folder and run these commands:
+                                            <ul class="code">
+                                                <li>
+                                                    git init
+                                                </li>
+                                                <li>
+                                                    git add .
+                                                </li>
+                                                <li>
+                                                    git commit -m "Initial commit"
+                                                </li>
+                                                <li>
+                                                    git remote add origin https://github.com/yourusername/portfolio-website.git
+                                                </li>
+                                                <li>
+                                                    git push -u origin master
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ol>
                                 </div>
-                                <div class="step3">
+                                <div class="step">
                                     <h5>
                                         Step 3: Enable GitHub Pages for Your Repository
                                     </h5>
                                     <p>
                                         Now that your website files are uploaded, you need to enable GitHub Pages to serve your site.
                                     </p>
-                                    <h6>
-                                        1. Go to Repository Settings:
-                                    </h6>
-                                    <p>
-                                        In your GitHub repository, click the Settings tab.
-                                    </p>
-                                    <h6>
-                                        2. Find the GitHub Pages Section:
-                                    </h6>
-                                    <p>
-                                        Scroll down to the GitHub Pages section.
-                                    </p>
-                                    <h6>
-                                        3. Select the Branch:
-                                    </h6>
-                                    <p>
-                                        Under the Source dropdown, choose main or master as the branch for deployment.
-                                    </p>
-                                    <h6>
-                                        4. Save:
-                                    </h6>
-                                    <p>
-                                        Your site will be live on https://yourusername.github.io/portfolio-website/ within a few minutes.
-                                    </p>
+                                    <ol>
+                                        <li>
+                                            <span>1. Go to Repository Settings: </span> in your GitHub repository, click the Settings tab.
+                                        </li>
+                                        <li>
+                                            <span>2. Find the GitHub Pages Section: </span>scroll down to the GitHub Pages section.
+                                        </li>
+                                        <li>
+                                            <span>3. Select the Branch: </span> under the Source dropdown, choose main or master as the branch for deployment.
+                                        </li>
+                                        <li>
+                                            <span>4. Save: </span> your site will be live on https://yourusername.github.io/portfolio-website/ within a few minutes.
+                                        </li>
+                                    </ol>
                                 </div>
-                                <div class="step4">
+                                <div class="step">
                                     <h5>
                                         Step 4: Buy a Custom Domain Name
                                     </h5>
                                     <p>
                                         To make your website more professional, you can buy a custom domain name (e.g., yourname.com). Here’s how to do it:
                                     </p>
-                                    <h6>
-                                        1. Choose a Domain Registrar:
-                                    </h6>
-                                    <p>
-                                        Go to a domain registrar like Namecheap, GoDaddy, or Google Domains.
-                                    </p>
-                                    <h6>
-                                        2. Search for Your Desired Domain:
-                                    </h6>
-                                    <p>
-                                        Use the search tool to find an available domain that fits your needs. Make sure to select a .com, .net, or other top-level domain that you prefer.
-                                    </p>
-                                    <h6>
-                                        3. Purchase the Domain:
-                                    </h6>
-                                    <p>
-                                        Follow the registrar’s steps to purchase the domain and complete the checkout process.
-                                    </p>
+                                    <ol>
+                                        <li>
+                                            <span>1. Choose a Domain Registrar: </span> go to a domain registrar like Namecheap, GoDaddy, or Google Domains.
+                                        </li>
+                                        <li>
+                                            <span>2. Search for Your Desired Domain: </span> use the search tool to find an available domain that fits your needs. Make sure to select a .com, .net, or other top-level domain that you prefer.
+                                        </li>
+                                        <li>
+                                            <span>3. Purchase the Domain:</span> follow the registrar’s steps to purchase the domain and complete the checkout process.
+                                        </li>
+                                    </ol>
                                 </div>
-                                <div class="step5">
+                                <div class="step">
 
                                     <h5>
                                         Step 5: Connect Your Domain to GitHub Pages
@@ -605,60 +583,59 @@
                                     <p>
                                         Once you have your custom domain, you can link it to your GitHub Pages site.
                                     </p>
-                                    <h6>
-                                        1. Configure DNS Settings:
-                                    </h6>
-                                    <p>
-                                        Go to your domain registrar’s DNS settings page and create two records:
-                                    </p>
-                                    <ul>
+                                    <ol>
                                         <li>
-                                            CNAME Record: 
-                                            <p>
-                                                Create a CNAME record pointing your domain (e.g., www.yourname.com) to yourusername.github.io.
-                                            </p>
-                                            <p>
-                                                Example CNAME entry:
-                                            </p>
+                                            <span>1. Configure DNS Settings: </span>go to your domain registrar’s DNS settings page and create two records:
                                             <ul>
-                                                <li>
-                                                    Host: www
+                                                <li class="bulleted">
+                                                    <span>CNAME Record: </span>
+                                                    <p class="indented">
+                                                        Create a CNAME record pointing your domain (e.g., www.yourname.com) to yourusername.github.io.
+                                                    </p>
+                                                    <p class="indented">
+                                                        Example CNAME entry:
+                                                        <ul>
+                                                            <li class="bulleted2">
+                                                                Host: www
+                                                            </li>
+                                                            <li class="bulleted2">
+                                                                Value: yourusername.github.io
+                                                            </li>
+                                                        </ul>
+                                                    </p>
                                                 </li>
-                                                <li>
-                                                    Value: yourusername.github.io
+                                                <li class="bulleted">
+                                                    A Records:
+                                                    <p class="indented">             
+                                                        Add A records to point your domain directly to GitHub Pages’ IP addresses.
+                                                    </p>
+                                                    <p class="indented">
+                                                        Example A Record entries:
+                                                    </p>
+                                                    <ul>
+                                                        <li class="bulleted2">
+                                                            Host: @ (or leave blank)
+                                                        </li>
+                                                        <li class="bulleted2">
+                                                            Value: 185.199.108.153
+                                                        </li>
+                                                        <li class="bulleted2">
+                                                            Value: 185.199.109.153
+                                                        </li>
+                                                        <li class="bulleted2">
+                                                            Value: 185.199.110.153
+                                                        </li>
+                                                        <li class="bulleted2">
+                                                            Value: 185.199.111.153
+                                                        </li>
+                                                    </ul>
+                                                    <p>
+                                                        These records ensure both the root domain and www subdomain point to your GitHub Pages site.
+                                                    </p>
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            A Records:
-                                            <p>             
-                                                Add A records to point your domain directly to GitHub Pages’ IP addresses.
-                                            </p>
-                                            <p>
-                                                Example A Record entries:
-                                            </p>
-                                            <ul>
-                                                <li>
-                                                    Host: @ (or leave blank)
-                                                </li>
-                                                <li>
-                                                    Value: 185.199.108.153
-                                                </li>
-                                                <li>
-                                                    Value: 185.199.109.153
-                                                </li>
-                                                <li>
-                                                    Value: 185.199.110.153
-                                                </li>
-                                                <li>
-                                                    Value: 185.199.111.153
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    <p>
-                                        These records ensure both the root domain and www subdomain point to your GitHub Pages site.
-                                    </p>
+                                    </ol>
                                     <h6>
                                        2. Add a CNAME File to Your Repository:
                                     </h6>
@@ -675,7 +652,7 @@
                                         Once your DNS settings have been updated (this can take a few hours), visit www.yourname.com in your browser. Your GitHub Pages site should be live with your custom domain.
                                     </p>
                                 </div>
-                                <div class="step6">
+                                <div class="step">
                                     <h5>
                                         Step 6: Updating Your Website
                                     </h5>
