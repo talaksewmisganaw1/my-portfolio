@@ -667,13 +667,16 @@ section {
   justify-content: flex-end;
   gap: 0.2rem;
   padding: 2.5rem 0.8rem 0.1rem;
-  color: var(--color-secondary);
+  color: var(--color-grey-2);
 }
 .blog-container .blog .expand-container .dots {
   font-size: 1.5rem;
 }
 .blog-container .blog .expand-container .expander {
   font-size: 1.5rem;
+}
+.blog-container .blog .expand-container .expander:hover {
+  color: var(--color-grey-1);
 }
 
 .expanded-blog-container {
@@ -685,11 +688,13 @@ section {
   left: 0;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 100%;
   z-index: 21;
   background-color: rgba(223, 223, 223, 0.164);
   justify-content: center;
 }
 .expanded-blog-container .blog {
+  border: solid 3px rgb(47, 255, 238);
   margin: 12rem;
   width: 55%;
   height: -moz-fit-content;
@@ -743,7 +748,7 @@ section {
 }
 .expanded-blog-container .blog .blog-text .step {
   border-top: 0.4rem solid rgba(69, 78, 86, 0.5607843137);
-  padding-top: 1rem;
+  padding-top: 2rem;
 }
 .expanded-blog-container .blog .blog-text .step .bulleted, .expanded-blog-container .blog .blog-text .step .bulleted2 {
   list-style-type: disc;
@@ -967,6 +972,9 @@ section {
 }
 
 @media screen and (max-width: 1432px) {
+  * {
+    border: solid 2px yellow;
+  }
   header {
     padding: 0 !important;
   }
@@ -989,6 +997,9 @@ section {
   }
 }
 @media screen and (max-width: 1070px) {
+  * {
+    border: solid 2px red;
+  }
   .about-container {
     grid-template-columns: 1fr;
   }
@@ -1009,6 +1020,9 @@ section {
   }
 }
 @media screen and (max-width: 970px) {
+  * {
+    border: solid 2px white;
+  }
   .section {
     padding: 7rem 6rem;
   }
@@ -1058,8 +1072,15 @@ section {
   .controls .control {
     margin: 0.6rem 1rem !important;
   }
+  .expanded-blog-container .blog {
+    margin: 12rem 5rem;
+    width: 70%;
+  }
 }
 @media screen and (max-width: 700px) {
+  * {
+    border: solid 2px violet;
+  }
   .section {
     padding: 7rem 3rem;
   }
@@ -1074,6 +1095,9 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 4rem;
+  }
+  .expanded-blog-container .blog {
+    width: 79%;
   }
 }
 @media screen and (max-width: 600px) {
@@ -1114,5 +1138,9 @@ section {
   }
   .main-title h2 .bg-text {
     font-size: 3rem;
+  }
+  .expanded-blog-container .blog {
+    margin: 12rem 0;
+    width: 95%;
   }
 }/*# sourceMappingURL=styles.css.map */

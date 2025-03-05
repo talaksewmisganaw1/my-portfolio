@@ -700,12 +700,16 @@ section {
             justify-content: flex-end;
             gap: .2rem;
             padding: 2.5rem .8rem .1rem;
-            color: var(--color-secondary);
+            // color: var(--color-secondary);
+            color: var(--color-grey-2);
             .dots {
                 font-size: 1.5rem;
             }
             .expander {
                 font-size: 1.5rem;
+                &:hover {
+                    color: var(--color-grey-1);
+                }
             }
         }
     }
@@ -719,10 +723,12 @@ section {
     right: 0;
     left: 0;
     height: fit-content;
+    min-height: 100%;
     z-index: 21;
     background-color: rgba(223, 223, 223, 0.164);
     justify-content: center;
     .blog {
+        border: solid 3px rgb(47, 255, 238);
         margin: 12rem;
         width: 55%;
         height: fit-content;
@@ -778,7 +784,7 @@ section {
             // }
             .step {
                 border-top: .4rem solid #454e568f;
-                padding-top: 1rem;
+                padding-top: 2rem;
                 .bulleted, .bulleted2 {
                     list-style-type: disc;
                 }
