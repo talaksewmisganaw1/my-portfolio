@@ -284,17 +284,18 @@ section {
 .about-container .left-about .certifications {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .about-container .left-about .certifications .text-and-btn {
   border: 3px solid var(--color-secondary);
-  width: 12.6rem;
+  width: 13rem;
   padding: 0.4rem 0.6rem;
   border-radius: 30px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 1rem;
-  transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out 0.2s;
 }
 .about-container .left-about .certifications .see-text {
   font-size: 1.2rem;
@@ -316,18 +317,17 @@ section {
 .about-container .left-about .certifications .shown {
   transform: translateY(0%) scaleY(1) !important;
   visibility: visible !important;
-  height: 12rem !important;
+  height: 15.5rem !important;
 }
 .about-container .left-about .certifications .extend {
-  width: 33rem;
-  gap: 21.3rem;
+  width: 100%;
 }
 .about-container .left-about .certifications .certificates {
   height: 0rem;
   visibility: hidden;
   transform: translateY(-50%) scaleY(0);
   position: relative;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s linear;
   padding: 0.4rem 1rem 0.3rem 1rem;
   border-top: none;
   border-top-left-radius: 0;
@@ -694,7 +694,6 @@ section {
   justify-content: center;
 }
 .expanded-blog-container .blog {
-  border: solid 3px rgb(47, 255, 238);
   margin: 12rem;
   width: 55%;
   height: -moz-fit-content;
@@ -788,10 +787,12 @@ section {
 
 .contact-content-con {
   display: flex;
+  flex-direction: row;
   padding-top: 3.5rem;
+  gap: 1rem;
 }
 .contact-content-con .left-contact {
-  flex: 2;
+  width: 50%;
 }
 .contact-content-con .left-contact .contact-info .contact-item {
   display: flex;
@@ -804,12 +805,20 @@ section {
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon {
   display: grid;
-  grid-template-columns: 40px 1fr;
+  grid-template-columns: 30px 1fr;
+  white-space: nowrap;
+  margin-right: 0.3rem;
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon i {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+}
+.contact-content-con .left-contact .contact-info .contact-item .email {
+  max-width: 60%;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 .contact-content-con .left-contact h4 {
   margin-top: 1rem;
@@ -819,35 +828,7 @@ section {
 .contact-content-con .left-contact p {
   margin: 1rem 0;
   line-height: 2rem;
-}
-.contact-content-con .left-contact .contact-icon {
-  display: flex;
-  margin-top: 2rem;
-}
-.contact-content-con .left-contact .contact-icon a {
-  display: flex;
-  align-items: center;
-  color: var(--color-white);
-  background-color: var(--color-grey-5);
-  cursor: pointer;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin: 0 0.4rem;
-  transition: all 0.4s ease-in-out;
-}
-.contact-content-con .left-contact .contact-icon a:hover {
-  background-color: var(--color-secondary);
-}
-.contact-content-con .left-contact .contact-icon a:hover i {
-  color: var(--color-primary);
-}
-.contact-content-con .left-contact .contact-icon a i {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 .contact-content-con .right-contact {
   flex: 3;
@@ -907,10 +888,16 @@ section {
   border-radius: 50%;
 }
 
+.contact {
+  margin: 5rem 0;
+}
+
 .main-btn {
+  background-color: inherit;
   border-radius: 30px;
   color: inherit;
   font-weight: 600;
+  font-size: 1.3rem;
   position: relative;
   border: 1px solid var(--color-secondary);
   display: flex;
@@ -928,7 +915,7 @@ section {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 1rem;
+  padding: 0.4rem;
 }
 .main-btn::before {
   content: "";
@@ -972,17 +959,23 @@ section {
 }
 
 @media screen and (max-width: 1432px) {
-  * {
-    border: solid 2px yellow;
-  }
   header {
     padding: 0 !important;
   }
   .section {
     padding: 7rem 11rem;
   }
+  .contact-section {
+    padding: 7rem 10.5rem;
+  }
+}
+@media screen and (max-width: 1070px) {
   .contact-content-con {
     flex-direction: column;
+    padding: 0 2rem;
+  }
+  .contact-content-con .left-contact {
+    width: 100%;
   }
   .contact-content-con .right-contact {
     margin-left: 0;
@@ -994,11 +987,6 @@ section {
   .contact-content-con .right-contact .ic2 :last-child {
     margin-left: 0;
     margin-top: 1.5rem;
-  }
-}
-@media screen and (max-width: 1070px) {
-  * {
-    border: solid 2px red;
   }
   .about-container {
     grid-template-columns: 1fr;
@@ -1020,9 +1008,6 @@ section {
   }
 }
 @media screen and (max-width: 970px) {
-  * {
-    border: solid 2px white;
-  }
   .section {
     padding: 7rem 6rem;
   }
@@ -1078,9 +1063,6 @@ section {
   }
 }
 @media screen and (max-width: 700px) {
-  * {
-    border: solid 2px violet;
-  }
   .section {
     padding: 7rem 3rem;
   }
@@ -1101,8 +1083,9 @@ section {
   }
 }
 @media screen and (max-width: 600px) {
-  * {
-    border: solid 2px green;
+  .contact-btns i {
+    width: 2.5rem;
+    height: 2.5rem;
   }
   .about-container {
     grid-template-columns: 1fr;
@@ -1127,6 +1110,9 @@ section {
   .section {
     padding: 2rem 2.5rem;
   }
+  .contact-container {
+    margin-bottom: 4rem;
+  }
   .portfolios {
     padding-bottom: 8rem;
   }
@@ -1142,5 +1128,8 @@ section {
   .expanded-blog-container .blog {
     margin: 12rem 0;
     width: 95%;
+  }
+  #blogs {
+    padding-bottom: 8rem;
   }
 }/*# sourceMappingURL=styles.css.map */
