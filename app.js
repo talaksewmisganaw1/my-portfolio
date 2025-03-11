@@ -22,8 +22,8 @@ sectionBtns.forEach(btn => {
         currentBtn.classList.add("active-btn");
 
         //add active class for the button clicked
-        sectionBtns.forEach(btn => btn.classList.remove("active"))
-        currentBtn.classList.add("active")
+        // sectionBtns.forEach(btn => btn.classList.remove("active"))
+        // currentBtn.classList.add("active")
         const id = e.currentTarget.dataset.id;
         const currentSection = document.getElementById(id);
 

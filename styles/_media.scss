@@ -8,10 +8,7 @@
 
 @media screen and (max-width: 1432px) {
     // * {
-        //         border: solid 2px yellow;
-        // }
-    // .right-header {
-    //     border: solid 1px yellow;
+    //         border: solid 2px yellow;
     // }
     
         
@@ -26,58 +23,54 @@
     .contact-section {
         padding: 7rem 10.5rem;
     }
-
-    // .portfolio {
-        //     padding-bottom: 30rem;
-        // }
-        
-    }
+       
+}
     
-    @media screen and (max-width: 1280px) {
-        .section {
-            padding: 7rem 9rem;
-        }
+@media screen and (max-width: 1280px) {
+    .section {
+        padding: 7rem 9rem;
     }
+}
     
 
-    @media screen and (min-width: 1125px) {
-        .right-header {
-            padding-right: 12rem !important;
-            margin-left: -3.5rem;
-        }
+@media screen and (min-width: 1125px) {
+    .right-header {
+        padding-right: 12rem !important;
+        margin-left: -3.5rem;
     }
+}
 
-    @media screen and (min-width: 971px) and (max-width: 1125px) {
-        .right-header {
-            margin-left: -3.5rem;
-            padding-right: 8rem !important;
-        }
+@media screen and (min-width: 971px) and (max-width: 1125px) {
+    .right-header {
+        margin-left: -3.5rem;
+        padding-right: 8rem !important;
     }
+}
     
-    @media screen and (max-width: 1070px) {
-        // * {
-        //     border: solid 2px red;
-        // }
+@media screen and (max-width: 1070px) {
+    // * {
+    //     border: solid 2px red;
+    // }
         
     
-        .contact-content-con {
-            flex-direction: column;
-            padding: 0 2rem;
-            margin-top: 2rem;
-            .left-contact {
-                width: 100%;
-            }
-            .right-contact {
-                margin-left: 0;
-                margin-top: 2.5rem;
-                .ic2 {
-                    flex-direction: column;
-                    :last-child {
-                        margin-left: 0;
-                        margin-top: 1.5rem;
-                    }
+    .contact-content-con {
+        flex-direction: column;
+        padding: 0 2rem;
+        margin-top: 2rem;
+        .left-contact {
+            width: 100%;
+        }
+        .right-contact {
+            margin-left: 0;
+            margin-top: 2.5rem;
+            .ic2 {
+                flex-direction: column;
+                :last-child {
+                    margin-left: 0;
+                    margin-top: 1.5rem;
                 }
             }
+        }
         }
         .about-container {
             grid-template-columns: 1fr;
@@ -111,10 +104,6 @@
                 opacity: .9;
             }
         }
-
-        // .portfolio {
-        //     padding-bottom: 50rem;
-        // }
     }
 
 @media screen and (max-width: 970px) {
@@ -180,10 +169,6 @@
         }
     }
 
-    // .portfolio {
-    //     padding-bottom: 55rem;
-    // }
-
     .expanded-blog-container {
         .blog {
             margin: 12rem 5rem;
@@ -220,9 +205,6 @@
         }
     }
 
-    // .portfolio {
-        //     padding-bottom: 53rem;
-    // }
     .expanded-blog-container {
         .blog {
             width: 79%;
@@ -233,13 +215,6 @@
 @media screen and (max-width: 600px) {
     // * {
     //     border: solid 2px green;
-    // }
-
-    // .contact-btns {
-    //     i {
-    //         width: 2.5rem;
-    //         height: 2.5rem;
-    //     }
     // }
 
     .about-container {
@@ -263,7 +238,6 @@
 
     .blog-container, .portfolios {
         grid-template-columns: 1fr;
-        // padding-bottom: 6rem;
     }
 
     .section {
