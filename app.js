@@ -11,6 +11,7 @@ const expandedBlogContainer = document.querySelector(".expanded-blog-container")
 const blogsSection = document.getElementById("blogs");
 const form = document.getElementById("contact-form");
 const inputFields = document.querySelectorAll(".input-field");
+const alert = document.querySelector(".alert");
 
 // emailjs.init("");
 
@@ -68,12 +69,10 @@ expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
     window.scrollTo(0, 0);
 
     //making the height of the blogs section not much more than the expanded blog
-    selectedBlog.style.border = "solid 5px brown";
     const expandedBlogHeight = selectedBlog.getBoundingClientRect().height;
     const remSizeInPixel = parseFloat(getComputedStyle(document.documentElement).fontSize);
     console.log(remSizeInPixel);
     blogsSection.style.height = `${expandedBlogHeight + (2 * 12 *  remSizeInPixel)}px`;
-    blogsSection.style.border = "pink solid 6px";
     blogsSection.style.overflow = "hidden";
 
     const closeBtn = document.querySelector(".close-btn");
@@ -92,6 +91,8 @@ expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    alert.style.display="block";
+
     const formData = new FormData(e.target);
 
     const emailData = {
@@ -104,13 +105,29 @@ form.addEventListener("submit", (e) => {
     emailjs.send("service_86qyy7c", "template_vo3mqud", emailData)
     .then(function(response) {
       console.log("Message sent successfully", response);
-      alert("Your message has been sent!");
+      alert.innerHTML = "Your message has been sent!";
+      alert.classList.add("alert-success");
       inputFields.forEach(inputfield => {
           inputfield.value="";
       })
+
+      setTimeout(() => {
+        clear();
+      }, 3000);
     }, function(error) {
       console.error("Failed to send message", error);
-      alert("Failed to send your message. Please try again later.");
+      alert.innerHTML = "Failed to send your message. Please try again later.";
+      alert.classList.add("alert-danger");
+
+      setTimeout(() => {
+        clear();
+      }, 3000);
     });
     // console.log([...formData.entries()]);
 })
+
+function clear() {
+    alert.classList.remove("alert-success");
+    alert.classList.remove("alert-danger");
+    alert.style.display="none";
+}
