@@ -12,8 +12,9 @@ const blogsSection = document.getElementById("blogs");
 const form = document.getElementById("contact-form");
 const inputFields = document.querySelectorAll(".input-field");
 const alert = document.querySelector(".alert");
+const myPhoto = document.querySelector(".my-photo");
 
-// emailjs.init("");
+
 
 sectionBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
@@ -38,6 +39,7 @@ const themeBtn = document.querySelector(".theme-btn");
 themeBtn.addEventListener('click', () => {
     let element = document.body;
     element.classList.toggle('light-mode');
+    myPhoto.classList.toggle("BW-maker");
 })
 
 // toggle the certificates link & description
@@ -82,10 +84,6 @@ expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {
         blogsSection.style.height="auto";
         blogsSection.style.overflow="auto";
     })
-    
-    // blogsSection.style.height="100vh";
-    // blogsSection.style.overflow="hidden";
-
 })))
 
 form.addEventListener("submit", (e) => {
