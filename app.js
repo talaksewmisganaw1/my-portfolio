@@ -2,8 +2,8 @@ const sections = document.querySelectorAll('.section');
 const btnsContainer = document.querySelector(".controls");
 const sectionBtns = document.querySelectorAll('.control');
 const body = document.querySelector('.main-content');
-const showCertificationBtn = document.querySelector('.show-btn');
-const certificationContainer = document.querySelector('.certifications')
+// const showCertificationBtn = document.querySelector('.show-btn');
+// const certificationContainer = document.querySelector('.certifications');
 const certificates = document.querySelector('.certificates');
 const showIcon = document.querySelector('.show-icon');
 const expandBtns = document.querySelectorAll('.expander');
@@ -44,16 +44,16 @@ themeBtn.addEventListener('click', () => {
 
 // toggle the certificates link & description
 
-showCertificationBtn.addEventListener("click", () => {
-    certificates.classList.toggle("shown");
-    if(!certificates.classList.contains("shown")) {
-        showCertificationBtn.parentElement.classList.remove('extend');
-        showCertificationBtn.classList.remove("rotated");    
-    } else {
-        showCertificationBtn.parentElement.classList.add('extend');
-        showCertificationBtn.classList.add("rotated");
-    }
-})
+// showCertificationBtn.addEventListener("click", () => {
+//     certificates.classList.toggle("shown");
+//     if(!certificates.classList.contains("shown")) {
+//         showCertificationBtn.parentElement.classList.remove('extend');
+//         showCertificationBtn.classList.remove("rotated");    
+//     } else {
+//         showCertificationBtn.parentElement.classList.add('extend');
+//         showCertificationBtn.classList.add("rotated");
+//     }
+// })
 
 //expanding blog
 expandBtns.forEach(btn => (btn.addEventListener("click", (e) => {

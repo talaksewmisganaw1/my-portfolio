@@ -75,7 +75,7 @@ section {
 }
 
 .section {
-  transform: translateY(-100%) scale(0);
+  transform: translateY(100%) scale(1);
   transition: all 0.4s ease-in-out;
   background-color: var(--color-primary);
 }
@@ -107,11 +107,11 @@ section {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
+  animation: scaleAnim 0.5s ease-in-out;
 }
 @keyframes scaleAnim {
   0% {
-    transform: translateY(-100%) scaleY(0);
+    transform: translateY(100%) scaleY(1);
   }
   100% {
     transform: translateY(0%) scaleY(1);
@@ -302,49 +302,57 @@ section {
   font-size: 2rem;
   text-transform: uppercase;
 }
-.about-container .left-about .certifications {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
+.about-stats {
+  padding-bottom: 4rem;
+  position: relative;
 }
-.about-container .left-about .certifications .text-and-btn {
-  border: 3px solid var(--color-secondary);
-  width: 13rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  transition: all 0.9s ease-in-out 0.2s;
+.about-stats .skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
 }
-.about-container .left-about .certifications .see-text {
-  font-size: 1.2rem;
-}
-.about-container .left-about .certifications .show-btn {
-  background-color: var(--color-secondary);
-  width: 2.2rem;
-  height: 2.2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  transform: rotate(0deg);
+.about-stats .skills .skill {
+  color: var(--color-grey-1);
+  font-weight: 500;
+  border: 1px solid var(--color-grey-5);
+  border-radius: 5px;
   transition: all 0.4s ease-in-out;
+  box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  padding-left: 3rem;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--color-grey-1);
+  letter-spacing: 2px;
 }
-.about-container .left-about .certifications .rotated {
-  transform: rotate(180deg);
+.about-stats .skills .skill:hover {
+  cursor: default;
+  transform: translateY(-5px);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
 }
-.about-container .left-about .certifications .shown {
+.about-stats .skills .skill::before {
+  margin: 1rem;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 2rem;
+  height: 2px;
+  background-color: var(--color-grey-5);
+}
+
+.shown {
   transform: translateY(0%) scaleY(1) !important;
   visibility: visible !important;
   height: 15.5rem !important;
 }
-.about-container .left-about .certifications .extend {
-  width: 100%;
-}
-.about-container .left-about .certifications .certificates {
+
+.certificates {
   height: 0rem;
+  width: 100% !important;
   visibility: hidden;
   transform: translateY(-50%) scaleY(0);
   position: relative;
@@ -353,82 +361,26 @@ section {
   border-top: none;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+  margin-top: -2.5rem;
 }
-.about-container .left-about .certifications .certificates .certificate {
-  padding: 0.8rem;
+.certificates .certificate {
+  padding: 0.8rem 3rem;
   border-bottom: solid 2px var(--color-grey-5);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.about-container .left-about .certifications .certificates .certificate .text {
+.certificates .certificate .text {
   font-size: 1rem;
 }
-.about-container .left-about .certifications .certificates .certificate .link {
+.certificates .certificate .link {
   background-color: var(--color-grey-4);
   padding: 0.2rem 0.4rem;
   border-radius: 5px;
 }
-.about-container .left-about .certifications .certificates .certificate:last-child {
+.certificates .certificate:last-child {
   border-bottom: 3px solid var(--color-secondary);
   padding-bottom: 1.2rem;
-}
-
-.about-stats {
-  padding-bottom: 4rem;
-  position: relative;
-}
-.about-stats .progress-bars {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-}
-.about-stats .progress-bars .progress-bar {
-  display: flex;
-  flex-direction: column;
-}
-.about-stats .progress-bars .progress-bar .prog-title {
-  font-weight: 500;
-}
-.about-stats .progress-bars .progress-bar .progress-con {
-  display: flex;
-  align-items: center;
-}
-.about-stats .progress-bars .progress-bar .progress-con .prog-text {
-  color: var(--color-grey-2);
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress {
-  width: 100%;
-  height: 0.45rem;
-  background-color: var(--color-grey-4);
-  margin-left: 1rem;
-  position: relative;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transition: all 0.4s ease-in-out;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .html {
-  width: 90%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .css {
-  width: 89%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .js {
-  width: 87%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .saas {
-  width: 89%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .bs {
-  width: 85%;
-}
-.about-stats .progress-bars .progress-bar .progress-con .progress .react {
-  width: 87%;
 }
 
 .stats-title {
@@ -1007,9 +959,9 @@ section {
   font-size: 6.3rem;
 }
 
-@media screen and (max-width: 1543px) {
-  .section {
-    padding: 7rem 14rem;
+@media screen and (min-width: 1432px) {
+  .sec2, .sec3, .sec4, .sec5 {
+    padding: 7rem 12rem;
   }
 }
 @media screen and (max-width: 1432px) {
@@ -1021,6 +973,11 @@ section {
   }
   .contact-section {
     padding: 7rem 10.5rem;
+  }
+}
+@media screen and (max-width: 1343px) and (min-width: 1070px) {
+  .port-text {
+    margin-top: 3rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -1038,6 +995,11 @@ section {
   .right-header {
     margin-left: -3.5rem;
     padding-right: 8rem !important;
+  }
+}
+@media screen and (min-width: 1070px) and (max-width: 1333px) {
+  .about-container {
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 1070px) {
@@ -1235,6 +1197,11 @@ section {
   .home-contact i {
     width: 2.6rem;
     height: 2.6rem;
+  }
+}
+@media screen and (max-width: 387px) {
+  .bg-text {
+    font-size: 2rem !important;
   }
 }
 @media screen and (max-width: 375px) {

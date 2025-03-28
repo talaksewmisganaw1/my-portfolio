@@ -1,7 +1,6 @@
-@media screen and (max-width: 1543px) {
-    
-    .section {
-        padding: 7rem 14rem;
+@media screen and (min-width: 1432px) {  
+    .sec2, .sec3, .sec4, .sec5 {
+        padding: 7rem 12rem;
     }
 }
 
@@ -13,7 +12,7 @@
     
         
     header {
-            padding: 0 !important;
+        padding: 0 !important;
     }
     
     .section {
@@ -25,6 +24,14 @@
     }
        
 }
+
+
+@media screen and (max-width: 1343px) and (min-width: 1070px) {
+    .port-text {
+        margin-top: 3rem;
+    }
+}
+
     
 @media screen and (max-width: 1280px) {
     .section {
@@ -44,6 +51,12 @@
     .right-header {
         margin-left: -3.5rem;
         padding-right: 8rem !important;
+    }
+}
+
+@media screen and (min-width: 1070px) and (max-width: 1333px) {
+    .about-container {
+        margin-top: 2rem;
     }
 }
     
@@ -305,6 +318,12 @@
             width: 2.6rem;
             height: 2.6rem;
         }
+    }
+}
+
+@media screen and (max-width: 387px) {
+    .bg-text {
+        font-size: 2rem !important;
     }
 }
 
