@@ -344,24 +344,11 @@ section {
   background-color: var(--color-grey-5);
 }
 
-.shown {
-  transform: translateY(0%) scaleY(1) !important;
-  visibility: visible !important;
-  height: 15.5rem !important;
-}
-
 .certificates {
-  height: 0rem;
   width: 100% !important;
-  visibility: hidden;
-  transform: translateY(-50%) scaleY(0);
-  position: relative;
-  transition: all 0.2s linear;
   padding: 0.4rem 1rem 0.3rem 1rem;
-  border-top: none;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   margin-top: -2.5rem;
+  margin-bottom: 3rem;
 }
 .certificates .certificate {
   padding: 0.8rem 3rem;
@@ -1105,6 +1092,11 @@ section {
     width: 70%;
   }
 }
+@media screen and (max-width: 730px) {
+  .certificate {
+    padding: 0.8rem 0.4rem !important;
+  }
+}
 @media screen and (max-width: 700px) {
   .section {
     padding: 7rem 3rem;
@@ -1188,6 +1180,11 @@ section {
     width: 2.7rem;
     height: 2.7rem;
     font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .skill {
+    font-size: 1rem !important;
   }
 }
 @media screen and (max-width: 410px) {
