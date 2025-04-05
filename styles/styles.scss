@@ -413,6 +413,7 @@ section {
     text-align: center;
     padding: 3.5rem 0;
     position: relative;
+    z-index: -99;
     &::before {
         content: "";
         position: absolute;
