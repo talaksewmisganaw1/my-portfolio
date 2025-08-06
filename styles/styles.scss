@@ -351,6 +351,9 @@ section {
             border-radius: 5px;
             transition: all .4s ease-in-out;
             box-shadow: 1px 2px 15px rgba(0,0,0,0.1);
+            height: 5rem;
+            display: flex;
+            justify-content: space-between;
             &:hover {
                 cursor: default;
                 transform: translateY(-5px);
@@ -359,23 +362,38 @@ section {
             }
 
             padding: 1.5rem;
-            padding-left: 3rem;
+            padding-left: 3.5rem;
             position: relative;
             text-transform: uppercase;
             font-size: 1.2rem;
             color: var(--color-grey-1);
             letter-spacing: 2px;
+            
+                border-left: solid 2px #fbbf24dd;
+                // border: solid 1px red;
+
             &::before {
                 margin: 1rem;
+                // border: solid 1px red;
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 15px;
+                top: 18px;
                 width: 2rem;
                 height: 2px;
-                background-color: var(--color-grey-5);
+                background-color: #fbbf24;
             }
-            
+            .skill-logo {
+                min-height: 100%;
+                width: 5rem;
+                // border: solid 1px red;
+                margin: -1rem;
+                img {
+                    width: 5rem;
+                    height: 100%;
+                    // border: solid 1px red;
+                }
+            }
         }
     }
 }
