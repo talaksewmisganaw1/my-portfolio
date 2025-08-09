@@ -1100,6 +1100,9 @@ section {
   .controls .control {
     margin: 0.6rem 1rem !important;
   }
+  .about-stats .skills {
+    grid-template-columns: 1fr;
+  }
   .expanded-blog-container .blog {
     margin: 12rem 5rem;
     width: 70%;
